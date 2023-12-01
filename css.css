@@ -1,0 +1,44 @@
+body {
+  background-color: azure;
+  overflow-x: hidden;
+}
+*{
+    text-align: center;
+}
+.card-fotos{
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: inset 0 0 4px 1px #dedcdc;
+    background-color: white;
+}
+.card{
+    height: 200px; 
+    padding-bottom: 66px;
+    padding-top: 60px;
+    border-radius: 8px;
+      width: 200px;
+      box-shadow: inset 0 0 4px 1px #dedcdc;
+}
+.navbar a {
+  color: black;
+}
+.navbar {
+  background-color: white;
+}
+div .cima{
+    margin-top: 10%;
+}
+.carousel-control, .carousel-control:hover {
+    opacity: 1;
+ }
+.fundo {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background: rgba(0, 0, 0, 0.7) url(img/fundo-lixo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  text-align: center;
+  color: white;
+}
