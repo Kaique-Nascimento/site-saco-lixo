@@ -3,4 +3,4 @@ Minha família vende sacos de lixo, então decidi fazer uma landing page com o i
 
 # Visite o site
 
-<a href="https://kaique-nascimento.github.io/site-saco-lixo/index.html"> <h1> Visite o site e faça seu pedido! </h1>
+<a href="https://kaique-nascimento.github.io/site-saco-lixo/index.html"> <h1> Visite o site e faça seu pedido! </h1></a>
