@@ -1,12 +1,16 @@
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 }
 body {
   background-color: #fafafa;
   overflow-x: hidden;
+
 }
 *{
     text-align: center;
+
 }
 .card-fotos{
     border-radius: 10px;
