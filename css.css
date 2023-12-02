@@ -1,5 +1,8 @@
+html{
+  scroll-behavior: smooth;
+}
 body {
-  background-color: azure;
+  background-color: #fafafa;
   overflow-x: hidden;
 }
 *{
@@ -7,18 +10,125 @@ body {
 }
 .card-fotos{
     border-radius: 10px;
-    width: 200px;
     box-shadow: inset 0 0 4px 1px #dedcdc;
     background-color: white;
 }
-.card{
-    height: 200px; 
-    padding-bottom: 66px;
-    padding-top: 60px;
-    border-radius: 8px;
-      width: 200px;
-      box-shadow: inset 0 0 4px 1px #dedcdc;
+
+.card {
+  border: 1px solid #ccc;
+  width: 14rem;
+  height: 25rem;
+  word-wrap: break-word;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.card-title {
+  font-size: 1.5rem;
+  margin-top: -24%;
+
+  font-weight: bold;
+  color: #333;
+}
+.card img{
+  margin-top: -20%;
+}
+
+.card-text {
+  color: #555;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: -9%;
+}
+.caixinha {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; 
+  display: flex;
+  justify-content: space-between;
+}
+.comprar{
+  display: flex;
+  margin-left: 10%;
+  text-align: right;
+}
+
+#cancelar{
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-right: 5%;
+
+}
+#compre{
+  transition: all 0.5s ease;
+  border: solid 1px black;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  margin-right: 10%;
+}
+#compre:hover{
+  background-color: black;
+  color: white
+}
+#fazer{
+  background-color: darkgreen;
+  border: solid 1px black;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 2%;
+  padding-left: 2%;
+  margin-right: 10%;
+}
+#fazer, #cancelar, .caixinha{
+  display: none;
+}
+.comprar h6 {
+  margin: 0;
+  margin-top: 10px; 
+}
+
+.mais,
+.menos {
+  width: 30px;
+  height: 30px;
+  background-color: black; 
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.quantidade {
+  width: calc(40% - 10px); 
+  height: 30px;
+  text-align: center;
+}
+.card ul li {
+  margin-bottom: 5px;
+  color: #777;
+}
+
+
+
 .navbar a {
   color: black;
 }

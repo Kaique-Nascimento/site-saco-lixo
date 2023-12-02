@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="css.css" />
     <link rel="stylesheet" href="bootstrap/bootstrap.css" />
     <link rel="icon" type="imagem/png" href="img/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Bem-Vindo</title>
   </head>
   <body>
@@ -33,20 +40,21 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div
+              id="carouselExampleFade"
+              class="carousel slide carousel-fade"
+              data-bs-ride="carousel"
+              data-bs-interval="1000"
+            >
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img src="img/saco.png" class="d-block w-100" alt="..." />
                 </div>
                 <div class="carousel-item">
-                  <img
-                    src="img/fundo-lixo.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
+                  <img src="img/saco-2.png" class="d-block w-100" alt="..." />
                 </div>
                 <div class="carousel-item">
-                  <img src="img/saco.png" class="d-block w-100" alt="..." />
+                  <img src="img/saco-3.png" class="d-block w-100" alt="..." />
                 </div>
               </div>
               <button
@@ -77,66 +85,208 @@
           </div>
           <div class="col-md-6 cima">
             <h1>Família Nascimento´s Sacos de Lixo</h1>
-            <h6>
-              Caso você esteja necessitando de sacos de lixo, temos uma
-              variedade para vendê-los!
-            </h6>
+            <h5>
+              Fazemos vendas de sacos lixo para toda a cidade de São Paulo e aos
+              arredores de Atibaia!
+              <br />(Bragança, Terra Preta, São Paulo)
+            </h5>
           </div>
         </div>
-        <hr />
-        <h1>Sacos de lixo</h1>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card" style="width: 18rem">
-              <img src="img/saco.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Saco de lixo 5m</h5>
-                <p class="card-text">
-                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
-                </p>
-                <ul>
-                    <li>comer</li>
-                    <li>cagar</li>
-                    <li>mijar</li>
-                  </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card" style="width: 18rem">
-              <img src="img/saco.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Saco de lixo 5m</h5>
-                <p class="card-text">
-                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
-                </p>
-                <ul>
-                    <li>comer</li>
-                    <li>cagar</li>
-                    <li>mijar</li>
-                  </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card" style="width: 18rem">
-              <img src="img/saco.png" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Saco de lixo 5m</h5>
-                <p class="card-text">
-                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
-                </p>
-                <ul>
-                    <li>comer</li>
-                    <li>cagar</li>
-                    <li>mijar</li>
-                  </ul>
-              </div>
-            </div>
-          </div>
+      </div>
 
-  
+      <hr />
+      <h1 id="sacos">Sacos de lixo</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 d-flex justify-content-center">
+            <div class="card">
+              <img src="img/saco.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Saco de lixo 5m</h5>
+                <p class="card-text">
+                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                </p>
+                <ul>
+                  <li>comer</li>
+                  <li>cagar</li>
+                  <li>mijar</li>
+                </ul>
+                <div class="caixinha">
+                  <button class="mais">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input type="text" class="quantidade" />
+                  <button class="menos">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 d-flex justify-content-center">
+            <div class="card">
+              <img src="img/saco.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Saco de lixo 5m</h5>
+                <p class="card-text">
+                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                </p>
+                <ul>
+                  <li>comer</li>
+                  <li>cagar</li>
+                  <li>mijar</li>
+                </ul>
+                <div class="caixinha">
+                  <button class="mais">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input type="text" class="quantidade" />
+                  <button class="menos">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 d-flex justify-content-center">
+            <div class="card">
+              <img src="img/saco.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Saco de lixo 5m</h5>
+                <p class="card-text">
+                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                </p>
+                <ul>
+                  <li>comer</li>
+                  <li>cagar</li>
+                  <li>mijar</li>
+                </ul>
+                <div class="caixinha">
+                  <button class="mais">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input type="text" class="quantidade" />
+                  <button class="menos">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 d-flex justify-content-center">
+            <div class="card">
+              <img src="img/saco.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Saco de lixo 5m</h5>
+                <p class="card-text">
+                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                </p>
+                <ul>
+                  <li>comer</li>
+                  <li>cagar</li>
+                  <li>mijar</li>
+                </ul>
+                <div class="caixinha">
+                  <button class="mais">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input type="text" class="quantidade" />
+                  <button class="menos">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 d-flex justify-content-center">
+            <div class="card">
+              <img src="img/saco.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Saco de lixo 5m</h5>
+                <p class="card-text">
+                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                </p>
+                <ul>
+                  <li>comer</li>
+                  <li>cagar</li>
+                  <li>mijar</li>
+                </ul>
+                <div class="caixinha">
+                  <button class="mais">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input type="text" class="quantidade" />
+                  <button class="menos">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 d-flex justify-content-center">
+            <div class="card">
+              <img src="img/saco.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Saco de lixo 5m</h5>
+                <p class="card-text">
+                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                </p>
+                <ul>
+                  <li>comer</li>
+                  <li>cagar</li>
+                  <li>mijar</li>
+                </ul>
+                <div class="caixinha">
+                  <button class="mais">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input type="text" class="quantidade" />
+                  <button class="menos">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="comprar d-flex justify-content-end">
+            <h6 id="compre" onclick="mostra()">
+              <i class="fa-solid fa-cart-shopping"></i> Comprar sacos
+            </button>
+                <h6 id="cancelar" onclick="esconde()">
+                  <i class="fa-solid fa-ban"></i>Cancelar</h6>
+            <h6 id="fazer">
+              <i class="fa-brands fa-whatsapp"></i> Fazer o pedido
+            </h6>
+            <script>
+              var compre = document.getElementById('compre');
+              var fazer = document.getElementById('fazer');
+              var cancelar= document.getElementById('cancelar');
+              var caixinha = document.querySelectorAll('.caixinha');
+
+
+function mostra(){
+
+             fazer.style.display = "block";
+                cancelar.style.display = "block";
+                compre.style.display = "none";
+                caixinha.forEach(caixinha => {
+                  caixinha.style.display = 'block';
+                });
+}
+function esconde(){                fazer.style.display = "none";
+                cancelar.style.display = "none";
+                compre.style.display = "block";
+                caixinha.forEach(caixinha => {
+                  caixinha.style.display = 'none';
+                });
+}
+              </script>
+          </div>
         </div>
+      </div>
+      <hr />
+      <div class="container">
+        <h1>Contatos</h1>
       </div>
     </section>
     <script src="bootstrap/bootstrap.js"></script>
