@@ -33,9 +33,9 @@
     </nav>
     <section>
       <div class="fundo" id="home">
-        <h1>Nós cansamos de ficar coçando o saco</h1>
+        <h1>Está nervoso, sem saco?</h1>
         <br />
-        <h4>Então, decidimos vendê-los para vocês!</h4>
+        <h4>Compre os nossos!</h4>
       </div>
       <div class="container">
         <div class="row">
@@ -88,7 +88,7 @@
             <h5>
               Fazemos vendas de sacos lixo para toda a cidade de São Paulo e aos
               arredores de Atibaia!
-              <br />(Bragança, Terra Preta, São Paulo)
+              <br />(Bragança, Terra Preta e outras cidades)
             </h5>
           </div>
         </div>
@@ -102,21 +102,24 @@
             <div class="card">
               <img src="img/saco.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Saco de lixo 5m</h5>
+                <h5 class="card-title">Pia - 35x45</h5>
                 <p class="card-text">
-                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                  Usado para coletar e descartar o lixo gerado na pia, como
+                  restos de alimentos, embalagens vazias, entre outros.
                 </p>
-                <ul>
-                  <li>comer</li>
-                  <li>cagar</li>
-                  <li>mijar</li>
-                </ul>
+                <h5 class="preco">R$ 40,00</h5>
                 <div class="caixinha">
-                  <button class="mais">
+                  <button class="menos" onclick="atualizaQuantidade('pia', -1)">
                     <i class="fa-solid fa-minus"></i>
                   </button>
-                  <input type="text" class="quantidade" />
-                  <button class="menos">
+   <input
+                    type="number"
+                    class="quantidade"
+                    id="quantidade_pia"
+                    min="0"
+                    max="10"
+                    oninput="validarQuantidade(this)"
+                  />                  <button class="mais" onclick="atualizaQuantidade('pia', 1)">
                     <i class="fa-solid fa-plus"></i>
                   </button>
                 </div>
@@ -127,21 +130,32 @@
             <div class="card">
               <img src="img/saco.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Saco de lixo 5m</h5>
+                <h5 class="card-title">20 Litros - 50x60</h5>
                 <p class="card-text">
-                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                  Utilizado para coletar e descartar o lixo de tamanho médio,
+                  como embalagens, papel e outros resíduos domésticos.
                 </p>
-                <ul>
-                  <li>comer</li>
-                  <li>cagar</li>
-                  <li>mijar</li>
-                </ul>
+                <h5 class="preco">R$ 45,00</h5>
+
                 <div class="caixinha">
-                  <button class="mais">
+                  <button
+                    class="menos"
+                    onclick="atualizaQuantidade('20litros', -1)"
+                  >
                     <i class="fa-solid fa-minus"></i>
                   </button>
-                  <input type="text" class="quantidade" />
-                  <button class="menos">
+                   <input
+                    type="number"
+                    class="quantidade"
+                    id="quantidade_20litros"
+                    min="0"
+                    max="10"
+                    oninput="validarQuantidade(this)"
+                  />
+                  <button
+                    class="mais"
+                    onclick="atualizaQuantidade('20litros', 1)"
+                  >
                     <i class="fa-solid fa-plus"></i>
                   </button>
                 </div>
@@ -152,21 +166,34 @@
             <div class="card">
               <img src="img/saco.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Saco de lixo 5m</h5>
+                <h5 class="card-title">40 Litros - 63x65</h5>
                 <p class="card-text">
-                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                  Usado para coletar e descartar uma quantidade maior
+                  de lixo doméstico. como embalagens e outros
+                  materiais descartáveis.
                 </p>
-                <ul>
-                  <li>comer</li>
-                  <li>cagar</li>
-                  <li>mijar</li>
-                </ul>
+
+                <h5 class="preco">R$ 50,00</h5>
+
                 <div class="caixinha">
-                  <button class="mais">
+                  <button
+                    class="menos"
+                    onclick="atualizaQuantidade('40litros', -1)"
+                  >
                     <i class="fa-solid fa-minus"></i>
                   </button>
-                  <input type="text" class="quantidade" />
-                  <button class="menos">
+                   <input
+                    type="number"
+                    class="quantidade"
+                    id="quantidade_40litros"
+                    min="0"
+                    max="10"
+                    oninput="validarQuantidade(this)"
+                  />
+                  <button
+                    class="mais"
+                    onclick="atualizaQuantidade('40litros', 1)"
+                  >
                     <i class="fa-solid fa-plus"></i>
                   </button>
                 </div>
@@ -177,21 +204,32 @@
             <div class="card">
               <img src="img/saco.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Saco de lixo 5m</h5>
+                <h5 class="card-title">60 Litros Normal - 70x80</h5>
                 <p class="card-text">
-                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                  Utilizado para coletar e descartar uma grande quantidade
+                  de lixo doméstico.
                 </p>
-                <ul>
-                  <li>comer</li>
-                  <li>cagar</li>
-                  <li>mijar</li>
-                </ul>
+                <h5 class="preco">R$ 55,00</h5>
+
                 <div class="caixinha">
-                  <button class="mais">
+                  <button
+                    class="menos"
+                    onclick="atualizaQuantidade('60litros', -1)"
+                  >
                     <i class="fa-solid fa-minus"></i>
                   </button>
-                  <input type="text" class="quantidade" />
-                  <button class="menos">
+                   <input
+                    type="number"
+                    class="quantidade"
+                    id="quantidade_60litros"
+                    min="0"
+                    max="10"
+                    oninput="validarQuantidade(this)"
+                  />
+                  <button
+                    class="mais"
+                    onclick="atualizaQuantidade('60litros', 1)"
+                  >
                     <i class="fa-solid fa-plus"></i>
                   </button>
                 </div>
@@ -202,21 +240,31 @@
             <div class="card">
               <img src="img/saco.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Saco de lixo 5m</h5>
+                <h5 class="card-title">60 Litros Grosso - 70x80</h5>
                 <p class="card-text">
-                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                  É resistente e adequado para coletar grandes quantidades de
+                  lixo doméstico, incluindo resíduos pesados.
                 </p>
-                <ul>
-                  <li>comer</li>
-                  <li>cagar</li>
-                  <li>mijar</li>
-                </ul>
+                <h5 class="preco">R$ 60,00</h5>
                 <div class="caixinha">
-                  <button class="mais">
+                  <button
+                    class="menos"
+                    onclick="atualizaQuantidade('60grosso', -1)"
+                  >
                     <i class="fa-solid fa-minus"></i>
                   </button>
-                  <input type="text" class="quantidade" />
-                  <button class="menos">
+                 <input
+                    type="number"
+                    class="quantidade"
+                    id="quantidade_60grosso"
+                    min="0"
+                    max="10"
+                    oninput="validarQuantidade(this)"
+                  />
+                  <button
+                    class="mais"
+                    onclick="atualizaQuantidade('60grosso', 1)"
+                  >
                     <i class="fa-solid fa-plus"></i>
                   </button>
                 </div>
@@ -227,68 +275,216 @@
             <div class="card">
               <img src="img/saco.png" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Saco de lixo 5m</h5>
+                <h5 class="card-title">100 Litros (Normal) - 80x105</h5>
                 <p class="card-text">
-                  O saco de lixo de 5m possue 5 metros e pode ser usado em:
+                  Utilizado para armazenar e descartar grandes quantidades de
+                  lixo
                 </p>
-                <ul>
-                  <li>comer</li>
-                  <li>cagar</li>
-                  <li>mijar</li>
-                </ul>
+                <h5 class="preco">R$ 70,00</h5>
+
                 <div class="caixinha">
-                  <button class="mais">
+                  <button
+                    class="menos"
+                    onclick="atualizaQuantidade('100litros', -1)"
+                  >
                     <i class="fa-solid fa-minus"></i>
                   </button>
-                  <input type="text" class="quantidade" />
-                  <button class="menos">
+                   <input
+                    type="number"
+                    class="quantidade"
+                    id="quantidade_100litros"
+                    min="0"
+                    max="10"
+                    oninput="validarQuantidade(this)"
+                  />
+                  <button
+                    class="mais"
+                    onclick="atualizaQuantidade('100litros', 1)"
+                  >
                     <i class="fa-solid fa-plus"></i>
                   </button>
                 </div>
               </div>
             </div>
           </div>
+          <div class="col-sm-4 d-flex justify-content-center">
+            <div class="card">
+              <img src="img/saco.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">100 Litros (Grosso) - 80x105</h5>
+                <p class="card-text">
+                  Utilizado para armazenar e descartar grandes quantidades de
+                  lixo pesados.
+                </p>
+                <h5 class="preco">R$ 80,00</h5>
+
+                <div class="caixinha">
+                  <button
+                    class="menos"
+                    onclick="atualizaQuantidade('100grosso', -1)"
+                  >
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="quantidade"
+                    id="quantidade_100grosso"
+                    min="0"
+                    max="10"
+                    oninput="validarQuantidade(this)"
+                  />
+                  <button
+                    class="mais"
+                    onclick="atualizaQuantidade('100grosso', 1)"
+                  >
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 d-flex justify-content-center">
+            <div class="card" id="100reforcado">
+              <img src="img/saco.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">100 Litros (Reforçado) - 80x105</h5>
+                <p class="card-text">
+                  É ideal para situações em que há objetos pontiagudos ou
+                  pesados no lixo.
+                </p>
+                <h5 class="preco">R$ 100,00</h5>
+
+                <div class="caixinha">
+                  <button
+                    class="menos"
+                    onclick="atualizaQuantidade('100reforcado', -1)"
+                  >
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="quantidade"
+                    id="quantidade_100reforcado"
+                    min="0"
+                    max="10"
+                    oninput="validarQuantidade(this)"
+                  />
+                  <button
+                    class="mais"
+                    onclick="atualizaQuantidade('100reforcado', 1)"
+                  >
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 d-flex justify-content-center">
+            <div class="card">
+              <img src="img/saco.png" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">200 Litros - 90x120</h5>
+                <p class="card-text">
+                  Usado em locais com alta produção de resíduos para armazenar
+                  grandes quantidades de lixo.
+                </p>
+                <h5 class="preco">R$ 75,00</h5>
+
+                <div class="caixinha">
+                  <button
+                    class="menos"
+                    onclick="atualizaQuantidade('200litros', -1)"
+                  >
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                  <input
+                    type="number"
+                    class="quantidade"
+                    id="quantidade_200litros"
+                    min="0"
+                    max="10"
+                    oninput="validarQuantidade(this)"
+                  />
+                  <button
+                    class="mais"
+                    onclick="atualizaQuantidade('200litros', 1)"
+                  >
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end" >
+            <h3 id="totalLabel">
+              Total: R$0.00</h3>
+             <br>
+          </div>
+      
           <div class="comprar d-flex justify-content-end">
+            
             <h6 id="compre" onclick="mostra()">
               <i class="fa-solid fa-cart-shopping"></i> Comprar sacos
-            </button>
-                <h6 id="cancelar" onclick="esconde()">
-                  <i class="fa-solid fa-ban"></i>Cancelar</h6>
-            <h6 id="fazer">
+            </h6>
+            <h6 id="cancelar" onclick="esconde()">
+              <i class="fa-solid fa-ban"></i>Cancelar
+            </h6>
+            <h6 id="pedido" onclick="modalPedido()">
               <i class="fa-brands fa-whatsapp"></i> Fazer o pedido
             </h6>
-            <script>
-              var compre = document.getElementById('compre');
-              var fazer = document.getElementById('fazer');
-              var cancelar= document.getElementById('cancelar');
-              var caixinha = document.querySelectorAll('.caixinha');
-
-
-function mostra(){
-
-             fazer.style.display = "block";
-                cancelar.style.display = "block";
-                compre.style.display = "none";
-                caixinha.forEach(caixinha => {
-                  caixinha.style.display = 'block';
-                });
-}
-function esconde(){                fazer.style.display = "none";
-                cancelar.style.display = "none";
-                compre.style.display = "block";
-                caixinha.forEach(caixinha => {
-                  caixinha.style.display = 'none';
-                });
-}
-              </script>
+            <script src="funcoes.js"></script>
           </div>
         </div>
       </div>
       <hr />
+      <div class="modal" id="pedido_modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Confirmação do Pedido</h5>
+              <button
+                type="button"
+                class="close fechar"
+                data-bs-dismiss="modal"
+                aria-label="Fechar"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Confirme se o pedido está correto:</p>
+              <ul id="pedidos" style="text-align:left;"></ul>
+              <h6 id="total">Total: </h6>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="vermelho" data-bs-dismiss="modal">
+                Voltar
+              </button>
+              <button type="button" class="verde" onclick="enviarMensagem()"> 
+                <i class="fa-brands fa-whatsapp"></i> 
+                Enviar pedido</button>
+                
+               
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="container">
-        <h1>Contatos</h1>
+        <h1 id="contatos">Contato</h1>
+        <a href="https://wa.me/5511972757489">
+        <button class="verde">              
+          <i class="fa-brands fa-whatsapp"></i>
+            +55 11 97275-7489
+        </button>
+      </a> 
+      <h3> Fazemos entrega por São Paulo, Atibaia e Região!</h3>
       </div>
     </section>
+    <footer class="bg-body-tertiary text-center text-lg-start">
+      <div class="text-center p-3 branco">
+        ©2023 Copyright: Família Nascimento
+      </div>
+    </footer>
     <script src="bootstrap/bootstrap.js"></script>
   </body>
 </html>

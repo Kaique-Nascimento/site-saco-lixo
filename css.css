@@ -13,17 +13,19 @@ body {
     box-shadow: inset 0 0 4px 1px #dedcdc;
     background-color: white;
 }
-
+.preco{
+margin-top: -8% ;}
 .card {
   border: 1px solid #ccc;
-  width: 14rem;
+  width: 15rem;
   height: 25rem;
-  word-wrap: break-word;
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+.card-body{
+  padding: 100%;
+}
 .card-title {
   font-size: 1.5rem;
   margin-top: -24%;
@@ -37,12 +39,6 @@ body {
 
 .card-text {
   color: #555;
-}
-
-.card ul {
-  list-style: none;
-  padding: 0;
-  margin-top: -9%;
 }
 .caixinha {
   position: absolute;
@@ -86,7 +82,33 @@ body {
   background-color: black;
   color: white
 }
-#fazer{
+.vermelho{
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.verde{
+  background-color: darkgreen;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.close.fechar{
+width: 10%;
+  color: black;
+  background-color: white;
+  border: none;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+#pedido{
   background-color: darkgreen;
   border: solid 1px black;
   color: white;
@@ -98,7 +120,7 @@ body {
   padding-left: 2%;
   margin-right: 10%;
 }
-#fazer, #cancelar, .caixinha{
+#pedido, #cancelar, .caixinha, #totalLabel{
   display: none;
 }
 .comprar h6 {
@@ -127,8 +149,14 @@ body {
   color: #777;
 }
 
-
-
+.fonte{
+  color: white;
+}
+.branco{
+  background-color: black;
+  margin-top: 10%;
+  color: white;
+}
 .navbar a {
   color: black;
 }
@@ -150,5 +178,18 @@ div .cima{
   background-size: cover;
   background-blend-mode: darken;
   text-align: center;
+  color: white;
+}
+input[type="number"] {
+  -moz-appearance: textfield; 
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+  margin: 0; 
+  }
+.verde a{
+  text-decoration: none;
   color: white;
 }
