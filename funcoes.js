@@ -6,6 +6,19 @@ var compre = document.getElementById('compre');
               var totalLabel = document.getElementById('totalLabel');
 var sacos_escolhidos = "";
 var tipo_saco = "";
+var pedidos = {};
+
+var precos = {
+  pia: 40,
+  '20litros': 45,
+  '40litros': 50,
+  '60litros': 55,
+  '60grosso': 60,
+  '100litros': 70,
+  '100grosso': 80,
+  '100reforcado': 100,
+  '200litros': 75
+};
 function mostra() {
     pedido.style.display = "block";
     totalLabel.style.display = "block";
@@ -34,21 +47,9 @@ function mostra() {
       quantidade.value = "0";
     });
     totalLabel.innerHTML = "R$0.00";
-
+    pedidos = {}
   }
-var pedidos = {};
 
-var precos = {
-  pia: 40,
-  '20litros': 45,
-  '40litros': 50,
-  '60litros': 55,
-  '60grosso': 60,
-  '100litros': 70,
-  '100grosso': 80,
-  '100reforcado': 100,
-  '200litros': 75
-};
 
 function atualizaQuantidade(idDoSaco, incremento) {
   var elementoQuantidade = document.getElementById('quantidade_' + idDoSaco);
@@ -72,14 +73,16 @@ function atualizaListaPedidos() {
   var listaPedidos = document.getElementById('pedidos');
   listaPedidos.innerHTML = '';
 
+
   for (var saco in pedidos) {
+      console.log(saco)
     var quantidade = pedidos[saco];
     var nomeSaco = formatarNomeSaco(saco);
 
     if (quantidade > 0) {
       var li = document.createElement('li');
       li.style.textAlign = "left";
-      li.textContent = `${nomeSaco} - ${quantidade}`;
+      li.textContent = `${quantidade} ${quantidade === 1 ? "saco" : "sacos"}  ${nomeSaco === "pia"? "para" : "de"} ${nomeSaco}`;
       listaPedidos.appendChild(li);
     }
   }
