@@ -7,7 +7,17 @@ var compre = document.getElementById('compre');
 var sacos_escolhidos = "";
 var tipo_saco = "";
 var pedidos = {};
+/*
+const sacos = [
+  {
+    nome: "pia",
+    tamanho:
+    preco:
+    descricao:
+  }
 
+]
+  terminar */ 
 var precos = {
   pia: 40,
   '20litros': 45,
@@ -139,8 +149,11 @@ alert("Escolha algum saco");
                      }
 
   }
+  
   function enviarMensagem() {
     var listaPedidos = document.querySelectorAll('#pedidos li');
+    var txtendereco = document.getElementById('txtendereco').value;
+    console.log(txtendereco);
     var dataAtual = new Date();
   
     var saudacao = 'Bom dia';
@@ -150,20 +163,22 @@ alert("Escolha algum saco");
       saudacao = 'Boa noite';
     }
     
-    var mensagem = `${saudacao}, eu quero comprar os sacos:\n`;
+    var mensagem = `${saudacao}! Eu quero comprar:\n`;
   
     listaPedidos.forEach(function (item) {
       mensagem += item.textContent + '\n';
     });
     var totali = totalLabel.textContent;
-  mensagem+="\nPreço "+totali;
-    if (mensagem.trim() !== '') {
+  mensagem+="\nPreço "+totali+"\nE no endereço: "+txtendereco;
+   if (txtendereco.trim() === '' || txtendereco.trim() === null){
+        alert("Digite seu endereço");
+   }
+    //if (mensagem.trim() !== '') {
+    else{
       mensagem = mensagem.trim();  
       var target = `https://wa.me/5511972757489?text=${encodeURIComponent(mensagem)}`;
       window.location.href = target;
-    } else {
-      alert('A lista de pedidos está vazia.');
-    }
+    } 
   }
   
   

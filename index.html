@@ -87,18 +87,22 @@
           <div class="card">
             <img src="img/saco.png" class="card-img-top" alt="..." />
             <div class="card-body">
+              <!--nome e tamanho -->
               <h5 class="card-title">Pia - 35x45</h5>
               <p class="card-text">
+                <!--descrição-->
                 Usado para coletar e descartar o lixo gerado na pia, como
-                restos de alimentos, embalagens vazias, entre outros.
+                restos de alimentos, embalagens vazias, entre outros.
               </p>
+              <!--preço-->
               <h5 class="preco">R$ 40,00</h5>
               <div class="caixinha">
                 <button class="menos" onclick="atualizaQuantidade('pia', -1)">
                   <i class="fa-solid fa-minus"></i>
                 </button>
                 <input type="number" class="quantidade" id="quantidade_pia" min="0" max="10"
-                  oninput="validarQuantidade(this)" /> <button class="mais" onclick="atualizaQuantidade('pia', 1)">
+                  oninput="validarQuantidade(this)" /> 
+                  <button class="mais" onclick="atualizaQuantidade('pia', 1)">
                   <i class="fa-solid fa-plus"></i>
                 </button>
               </div>
@@ -301,6 +305,7 @@
         <div class="d-flex justify-content-end">
           <h3 id="totalLabel">
             Total: R$0.00</h3>
+            <p style="color: red;">* limitado a 10 sacos por compra</p>
           <br>
         </div>
 
@@ -335,6 +340,8 @@
             <p>Confirme se o pedido está correto:</p>
             <ul id="pedidos" style="text-align:left;"></ul>
             <h6 id="total">Total: </h6>
+            <p> Nos informe seu endereço: </p>
+            <input type="text" id="txtendereco">
           </div>
           <div class="modal-footer">
             <button type="button" class="vermelho" data-bs-dismiss="modal">
