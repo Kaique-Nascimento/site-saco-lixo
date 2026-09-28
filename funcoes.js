@@ -28,7 +28,7 @@ const sacos = [
   descricao: "Usado para coletar e descartar uma quantidade maior de lixo doméstico. como embalagens e outros materiais descartáveis."
   },
                 {
-  nome:"60 litros (normal)",
+  nome:"60 litros",
   tamanho: "70x80",
   preco: 55,
   descricao: "Utilizado para coletar e descartar uma grande quantidade de lixo doméstico."
@@ -40,7 +40,7 @@ const sacos = [
   descricao: "É resistente e adequado para coletar grandes quantidades de lixo doméstico, incluindo resíduos pesados."
   },
                 {
-  nome:"100 litros (normal)",
+  nome:"100 litros",
   tamanho: "80x105",
   preco: 70,
   descricao: " Utilizado para armazenar e descartar grandes quantidades de lixo"
@@ -66,9 +66,53 @@ const sacos = [
 ]
 
 function carregarSacos(){
+  var sacoVariavel = "";
+  var sacoTitulo = "";
+  var sacoTamanho = "";
+  var sacoPreco = "";
+  var sacoDescricao = "";
+  var caixaInformacoes = document.getElementById('listaSacos');
   for (var informacoes in sacos){
-    console.log(sacos[informacoes]);
+     sacoVariavel = sacos[informacoes].nome.replace(/\s+/g, '');
+     sacoTitulo = sacos[informacoes].nome;
+     sacoTamanho = sacos[informacoes].tamanho;
+     sacoPreco = sacos[informacoes].preco;
+     sacoDescricao = sacos[informacoes].descricao;
+     
+    caixaInformacoes.innerHTML+=
+    `
+    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+          <div class="card">
+            <img src="img/saco.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <!--nome e tamanho -->
+              <h5 class="card-title">${sacoTitulo} - ${sacoTamanho}</h5>
+              <p class="card-text">
+                <!--descrição-->
+                ${sacoDescricao}
+              </p>
+              <!--preço-->
+              <h5 class="preco">R$ ${sacoPreco}</h5>
+               <div class="caixinha">
+                <button class="menos" onclick="atualizaQuantidade('${sacoVariavel}', -1)">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <input type="number" class="quantidade" id="quantidade_${sacoVariavel}" min="0" max="10" style="cursor:default" readonly /> 
+                  <button class="mais" onclick="atualizaQuantidade('${sacoVariavel}', 1)">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    `;
+    console.log(sacos[informacoes].nome);
+    console.log(informacoes);
   }
+    caixinha = document.querySelectorAll('.caixinha');
+    quantidade = document.querySelectorAll('.quantidade');
+
+
 }
    
 var precos = {
@@ -87,13 +131,14 @@ function mostra() {
     totalLabel.style.display = "block";
     cancelar.style.display = "block";
     compre.style.display = "none";
-    
+   
+     
     caixinha.forEach(caixinha => {
-      caixinha.style.display = 'block';
+         caixinha.style.display = "block";
     });
   
     quantidade.forEach(quantidade => {
-      quantidade.value = "0";
+     quantidade.value = "0";
     });
   }
   function esconde() {
@@ -166,7 +211,7 @@ function atualizaTotal() {
 
 }
 
-
+/*
 function validarQuantidade(input) {
   input.value = input.value.replace(/[^\d]/g, '');
 
@@ -183,7 +228,7 @@ function validarQuantidade(input) {
 document.getElementById('quantidade_pia').addEventListener('input', function() {
   validarQuantidade(this);
 });
-
+*/
   function modalPedido(){
     var quantidade = document.querySelectorAll('.quantidade');
 var e = "";
