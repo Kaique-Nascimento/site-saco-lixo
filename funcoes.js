@@ -7,17 +7,70 @@ var compre = document.getElementById('compre');
 var sacos_escolhidos = "";
 var tipo_saco = "";
 var pedidos = {};
-/*
+
 const sacos = [
   {
     nome: "pia",
-    tamanho:
-    preco:
-    descricao:
+    tamanho: "35x45",
+    preco: 40,
+    descricao: "Usado para coletar e descartar o lixo gerado na pia, como restos de alimentos, embalagens vazias, entre outros."
+  },
+  {
+  nome:"20 litros",
+  tamanho: "50x60",
+  preco: 45,
+  descricao: "Utilizado para coletar e descartar o lixo de tamanho médio, como embalagens, papel e outros resíduos domésticos."
+  },
+{
+  nome:"40 litros",
+  tamanho: "63x65",
+  preco: 50,
+  descricao: "Usado para coletar e descartar uma quantidade maior de lixo doméstico. como embalagens e outros materiais descartáveis."
+  },
+                {
+  nome:"60 litros (normal)",
+  tamanho: "70x80",
+  preco: 55,
+  descricao: "Utilizado para coletar e descartar uma grande quantidade de lixo doméstico."
+  },
+                {
+  nome:"60 litros (grosso)",
+  tamanho: "70x80",
+  preco: 60,
+  descricao: "É resistente e adequado para coletar grandes quantidades de lixo doméstico, incluindo resíduos pesados."
+  },
+                {
+  nome:"100 litros (normal)",
+  tamanho: "80x105",
+  preco: 70,
+  descricao: " Utilizado para armazenar e descartar grandes quantidades de lixo"
+  },
+                {
+  nome:"100 litros (grosso)",
+  tamanho: "80x105",
+  preco: 80,
+  descricao: "Utilizado para coletar e descartar o lixo de tamanho médio, como embalagens, papel e outros resíduos domésticos."
+  },
+                {
+  nome:"100 litros (reforçado)",
+  tamanho: "80x105",
+  preco: 100,
+  descricao: "É ideal para situações em que há objetos pontiagudos ou pesados no lixo."
+  },
+                {
+  nome:"200 litros",
+  tamanho: "90x120",
+  preco: 75,
+  descricao: "Usado em locais com alta produção de resíduos para armazenar grandes quantidades de lixo."
   }
-
 ]
-  terminar */ 
+
+function carregarSacos(){
+  for (var informacoes in sacos){
+    console.log(sacos[informacoes]);
+  }
+}
+   
 var precos = {
   pia: 40,
   '20litros': 45,
@@ -180,6 +233,9 @@ alert("Escolha algum saco");
       window.location.href = target;
     } 
   }
-  
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+    carregarSacos();
+  });
   
   
